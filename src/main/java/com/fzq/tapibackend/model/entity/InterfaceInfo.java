@@ -12,7 +12,7 @@ import lombok.Data;
  */
 @TableName(value ="InterfaceInfo")
 @Data
-public class Interfaceinfo implements Serializable {
+public class InterfaceInfo implements Serializable {
     /**
      * primary key
      */
@@ -106,7 +106,7 @@ public class Interfaceinfo implements Serializable {
         if (getClass() != that.getClass()) {
             return false;
         }
-        Interfaceinfo other = (Interfaceinfo) that;
+        InterfaceInfo other = (InterfaceInfo) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
             && (this.getName() == null ? other.getName() == null : this.getName().equals(other.getName()))
             && (this.getDescription() == null ? other.getDescription() == null : this.getDescription().equals(other.getDescription()))
