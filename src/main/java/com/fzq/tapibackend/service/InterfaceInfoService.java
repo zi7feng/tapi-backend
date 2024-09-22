@@ -1,7 +1,11 @@
 package com.fzq.tapibackend.service;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.fzq.tapibackend.common.PageResponse;
+import com.fzq.tapibackend.model.dto.InterfaceInfoQueryDTO;
 import com.fzq.tapibackend.model.entity.InterfaceInfo;
 import com.baomidou.mybatisplus.extension.service.IService;
+import org.springframework.data.domain.Page;
 
 import java.util.List;
 
@@ -24,4 +28,24 @@ public interface InterfaceInfoService extends IService<InterfaceInfo> {
      * @return true if the save operation is successful, false otherwise.
      */
     boolean save(InterfaceInfo interfaceInfo);
+
+    /**
+     * Get InterfaceInfo By id
+     * @param id The Interface id
+     * @return Instance of id
+     */
+    InterfaceInfo getById(Long id);
+
+    /**
+     * Delete InterfaceInfo By id
+     * @param id The Interface id
+     * @return True if delete successfully
+     */
+    boolean deleteById(Long id);
+
+
+    boolean updateById(InterfaceInfo interfaceInfo);
+
+    IPage<InterfaceInfo> listInterfaceInfoByPage(InterfaceInfoQueryDTO interfaceInfoQueryDTO);
+
 }

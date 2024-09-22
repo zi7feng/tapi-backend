@@ -1,25 +1,16 @@
 package com.fzq.tapibackend.common;
 
+import lombok.Data;
+
 import java.util.List;
 
+@Data
 public class PageResponse<T> {
     private long total;
     private List<T> records;
 
-    // 标准的getters和setters
-    public long getTotal() {
-        return total;
-    }
+    private Integer currentPage = 1;
+    private Integer pageSize = 10;
 
-    public void setTotal(long total) {
-        this.total = total;
-    }
 
-    public List<T> getRecords() {
-        return records;
-    }
-
-    public void setRecords(List<T> records) {
-        this.records = records;
-    }
 }
