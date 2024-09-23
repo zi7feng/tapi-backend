@@ -1,15 +1,13 @@
 package com.fzq.tapibackend.controller;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.core.toolkit.CollectionUtils;
 import com.fzq.tapibackend.common.BaseResponse;
 import com.fzq.tapibackend.common.ErrorCode;
-import com.fzq.tapibackend.common.PageResponse;
 import com.fzq.tapibackend.common.ResultUtils;
 import com.fzq.tapibackend.exception.BusinessException;
-import com.fzq.tapibackend.model.dto.AddInterfaceInfoDTO;
-import com.fzq.tapibackend.model.dto.InterfaceInfoQueryDTO;
-import com.fzq.tapibackend.model.dto.UpdateInterfaceInfoDTO;
+import com.fzq.tapibackend.model.dto.interfaceInfo.AddInterfaceInfoDTO;
+import com.fzq.tapibackend.model.dto.interfaceInfo.InterfaceInfoQueryDTO;
+import com.fzq.tapibackend.model.dto.interfaceInfo.UpdateInterfaceInfoDTO;
 import com.fzq.tapibackend.model.dto.common.DeleteDTO;
 import com.fzq.tapibackend.model.entity.InterfaceInfo;
 import com.fzq.tapibackend.service.InterfaceInfoService;
@@ -17,7 +15,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import org.apache.commons.lang3.ObjectUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 

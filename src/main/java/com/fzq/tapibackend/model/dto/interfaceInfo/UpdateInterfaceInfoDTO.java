@@ -1,4 +1,4 @@
-package com.fzq.tapibackend.model.dto;
+package com.fzq.tapibackend.model.dto.interfaceInfo;
 
 import lombok.Data;
 

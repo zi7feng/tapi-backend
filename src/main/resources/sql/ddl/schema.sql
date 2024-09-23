@@ -1,8 +1,29 @@
-DROP DATABASE TAPI;
+# DROP DATABASE TAPI;
 
 CREATE DATABASE IF NOT EXISTS TAPI;
 
 USE TAPI;
+
+# drop table tapi.User;
+-- user table
+create table if not exists tapi.User
+(
+    id             bigint auto_increment comment 'id' primary key,
+    user_name       varchar(256)                           null comment 'User Name',
+    user_account    varchar(256)                           not null comment 'User Account',
+    user_avatar     varchar(1024)                          null comment 'User Avatar',
+    email          varchar(256)                           null comment 'email',
+    user_role       varchar(256) default 'user'            not null comment 'user Role：user / admin',
+    user_password   varchar(512)                           null comment 'user password',
+    balance        bigint       default 30                not null comment 'user balance, 30 by default on signing up',
+    status         tinyint      default 0                 not null comment 'account status（0- normal 1- blocked）',
+    create_time     datetime     default CURRENT_TIMESTAMP not null comment 'create time',
+    update_time     datetime     default CURRENT_TIMESTAMP not null on update CURRENT_TIMESTAMP comment 'update time',
+    is_delete       tinyint      default 0                 not null comment 'is delete? 1- deleted',
+    constraint uni_userAccount
+        unique (user_account)
+)
+    comment 'User table';
 
 -- Interface information
 CREATE TABLE IF NOT EXISTS InterfaceInfo

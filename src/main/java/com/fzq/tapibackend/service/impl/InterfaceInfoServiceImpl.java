@@ -5,16 +5,13 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.fzq.tapibackend.common.ErrorCode;
-import com.fzq.tapibackend.common.PageResponse;
 import com.fzq.tapibackend.exception.BusinessException;
-import com.fzq.tapibackend.model.dto.InterfaceInfoQueryDTO;
+import com.fzq.tapibackend.mapper.InterfaceInfoMapper;
+import com.fzq.tapibackend.model.dto.interfaceInfo.InterfaceInfoQueryDTO;
 import com.fzq.tapibackend.model.entity.InterfaceInfo;
 import com.fzq.tapibackend.service.InterfaceInfoService;
-import com.fzq.tapibackend.mapper.InterfaceInfoMapper;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.PageImpl;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -58,6 +55,8 @@ public class InterfaceInfoServiceImpl extends ServiceImpl<InterfaceInfoMapper, I
         if (StringUtils.isNotBlank(name) && name.length() > 50) {
             throw new BusinessException(ErrorCode.PARAMS_ERROR, "Name exceeds max length of 50");
         }
+
+        // TODO other verification
     }
 
     /**

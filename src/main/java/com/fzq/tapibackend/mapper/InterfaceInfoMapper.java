@@ -1,6 +1,5 @@
 package com.fzq.tapibackend.mapper;
 
-import com.fzq.tapibackend.model.dto.InterfaceInfoQueryDTO;
 import com.fzq.tapibackend.model.entity.InterfaceInfo;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.*;

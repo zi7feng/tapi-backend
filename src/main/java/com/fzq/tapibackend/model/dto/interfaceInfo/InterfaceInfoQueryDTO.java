@@ -1,6 +1,5 @@
-package com.fzq.tapibackend.model.dto;
+package com.fzq.tapibackend.model.dto.interfaceInfo;
 
-import com.fzq.tapibackend.common.PageResponse;
 import lombok.Data;
 
 import java.io.Serializable;

@@ -1,11 +1,9 @@
 package com.fzq.tapibackend.service;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.fzq.tapibackend.common.PageResponse;
-import com.fzq.tapibackend.model.dto.InterfaceInfoQueryDTO;
+import com.fzq.tapibackend.model.dto.interfaceInfo.InterfaceInfoQueryDTO;
 import com.fzq.tapibackend.model.entity.InterfaceInfo;
 import com.baomidou.mybatisplus.extension.service.IService;
-import org.springframework.data.domain.Page;
 
 import java.util.List;
 
